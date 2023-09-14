@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="418.0" prefWidth="631.0" style="-fx-background-color: #638494;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RentFormController">
+    <children>
+        <Label layoutX="264.0" layoutY="14.0" prefHeight="36.0" prefWidth="102.0" text="Rent" textFill="#050202">
+            <font>
+                <Font name="OCR A Extended" size="34.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtId" layoutX="27.0" layoutY="64.0" onAction="#txtCodeOnAction" prefHeight="30.0" prefWidth="264.0" promptText="Car ID">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtDescription" layoutX="326.0" layoutY="64.0" prefHeight="31.0" prefWidth="278.0" promptText="Description">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtRentalPrice" layoutX="27.0" layoutY="101.0" prefHeight="30.0" prefWidth="264.0" promptText="Rental Price">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtQuantityOnHand" layoutX="326.0" layoutY="101.0" prefHeight="31.0" prefWidth="278.0" promptText="Quatity On Hand">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <Button layoutX="520.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Save" textFill="#030101">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button layoutX="433.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Clear" textFill="#0b0505">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <TableView fx:id="tblItem" layoutX="29.0" layoutY="228.0" prefHeight="180.0" prefWidth="580.0">
+            <columns>
+                <TableColumn fx:id="colCarId" prefWidth="69.60000228881836" text="Car ID" />
+                <TableColumn fx:id="colDescription" prefWidth="83.20001220703125" text="Description" />
+                <TableColumn fx:id="colRentalPrice" prefWidth="92.80000305175781" text="Rental Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="117.60003662109375" text="Quntity On Hand" />
+                <TableColumn fx:id="colCustomerName" prefWidth="115.20001220703125" text="Customer Name" />
+            <TableColumn fx:id="colReturnDate" prefWidth="93.60003662109375" text="Return Date" />
+            </columns>
+        </TableView>
+      <TextField fx:id="txtCustomerName" layoutX="27.0" layoutY="137.0" prefHeight="30.0" prefWidth="264.0" promptText="Customer Name">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <DatePicker fx:id="txtReturnDate" layoutX="326.0" layoutY="137.0" prefHeight="30.0" prefWidth="277.0" promptText="Return Date" />
+      <Button layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnReturnOnAction" style="-fx-background-color: #0e0f26;" text="Return" textFill="#f4f2f2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+</AnchorPane>

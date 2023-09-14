@@ -1,0 +1,33 @@
+
+DROP DATABASE IF EXISTS carsale;
+
+CREATE DATABASE IF NOT EXISTS carsale;
+
+
+USE carsale;
+
+
+CREATE TABLE rent (
+    CarId VARCHAR(15) PRIMARY KEY,
+    Description TEXT NOT NULL,
+    Rental_price DOUBLE NOT NULL,
+    qty_on_hand INT NOT NULL,
+    Customer_name VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE car (
+    CarId VARCHAR(15) PRIMARY KEY,
+    CarModel VARCHAR(50) NOT NULL,
+    CarType TEXT NOT NULL,
+    CarRental VARCHAR(15) NOT NULL,
+    CarNumber VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE customer (
+    CustomerId VARCHAR(15) PRIMARY KEY,
+    CustomerName VARCHAR(50) NOT NULL,
+    CustomerNic VARCHAR(15) NOT NULL,
+    CustomerTel VARCHAR(15) NOT NULL,
+    CustomerAddress VARCHAR(50) NOT NULL
+);

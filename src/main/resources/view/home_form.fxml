@@ -3,22 +3,19 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="607.0" prefWidth="939.0" style="-fx-background-color: #0e0f26;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeFormController">
+<AnchorPane fx:id="rootNode" prefHeight="615.0" prefWidth="859.0" style="-fx-background-color: #0e0f26;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeFormController">
     <children>
-        <Label alignment="CENTER" prefHeight="80.0" prefWidth="939.0" style="-fx-background-color: #3498db;" text="EcoWheels Car Rentals" textFill="#f2eeee">
+        <Label alignment="CENTER" layoutY="8.0" prefHeight="80.0" prefWidth="859.0" style="-fx-background-color: #3498db;" text="EcoWheels Car Rentals" textFill="#f2eeee">
             <font>
                 <Font name="OCR A Extended" size="34.0" />
             </font>
         </Label>
-        <Button layoutX="173.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Customer" textFill="#080505">
+        <Button layoutX="267.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnCarOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Car" textFill="#080505">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -26,7 +23,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
         </Button>
-        <Button layoutX="338.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Item" textFill="#030101">
+        <Button layoutX="474.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Customer" textFill="#030101">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -34,7 +31,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
         </Button>
-        <Button layoutX="481.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Supplier" textFill="#030202">
+        <Button layoutX="679.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnRentOnAction" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Rent" textFill="#030202">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -42,7 +39,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
         </Button>
-        <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnDashboard" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Dashboard" textFill="#030000">
+        <Button layoutX="63.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnDashboard" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Dashboard" textFill="#030000">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -50,22 +47,50 @@
             <Font name="System Bold" size="16.0" />
          </font>
         </Button>
-        <AnchorPane id="middleAnchorPane" fx:id="node" layoutX="20.0" layoutY="184.0" prefHeight="402.0" prefWidth="596.0" style="-fx-background-color: #638494;">
-            <children>
-                <TableView layoutX="41.0" layoutY="129.0" prefHeight="200.0" prefWidth="476.0">
-                    <columns>
-                        <TableColumn prefWidth="75.0" text="date" />
-                        <TableColumn prefWidth="75.0" text="time" />
-                        <TableColumn prefWidth="325.0" text="venue" />
-                    </columns>
-                </TableView>
-            </children>
-        </AnchorPane>
-      <ImageView fitHeight="64.0" fitWidth="76.0" layoutX="109.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+        <AnchorPane id="middleAnchorPane" fx:id="node" layoutY="199.0" prefHeight="423.0" prefWidth="628.0" style="-fx-background-color: #638494;">
+         <children>
+            <ImageView fitHeight="384.0" fitWidth="418.0" layoutX="58.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Add%20a%20heading.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="70.0" layoutX="501.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-eco-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="64.0" layoutX="501.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-calendar-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="496.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-hotline-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="73.0" layoutX="501.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-lease-30.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="391.0" prefHeight="18.0" prefWidth="162.0" text="visit www.ecowheels.com" textFill="#0a0a0b" />
+            <Label layoutX="242.0" layoutY="391.0" prefHeight="18.0" prefWidth="111.0" text="Tel 011 2434789" textFill="#0f0f10" />
+            <Label layoutX="414.0" layoutY="391.0" prefHeight="18.0" prefWidth="162.0" text="32,Main street, Colombo 5" textFill="#020203" />
+         </children></AnchorPane>
+      <ImageView fitHeight="64.0" fitWidth="76.0" layoutX="133.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/car.png" />
          </image>
       </ImageView>
-      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="699.0" layoutY="141.0" />
+      <ImageView fitHeight="432.0" fitWidth="238.0" layoutX="622.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/car%20(2).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="790.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" style="-fx-background-color: #0e0f26;" text="LogOut" textFill="#efebeb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
     </children>
 </AnchorPane>

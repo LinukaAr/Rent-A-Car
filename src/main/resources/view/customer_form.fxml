@@ -7,27 +7,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerFormController">
+<AnchorPane prefHeight="336.0" prefWidth="573.0" style="-fx-background-color: #638494;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerFormController">
     <children>
-        <Label layoutX="163.0" layoutY="26.0" text="Customer Manage">
+        <Label layoutX="166.0" layoutY="31.0" text="Customer Manage">
             <font>
-                <Font name="System Bold" size="24.0" />
+                <Font name="OCR A Extended" size="32.0" />
             </font>
         </Label>
-        <TextField layoutX="27.0" layoutY="106.0" prefHeight="30.0" prefWidth="246.0" promptText="customer id" />
-        <TextField layoutX="311.0" layoutY="106.0" prefHeight="30.0" prefWidth="246.0" promptText="customer name" />
-        <TextField layoutX="27.0" layoutY="185.0" prefHeight="30.0" prefWidth="246.0" promptText="customer address" />
-        <TextField layoutX="311.0" layoutY="185.0" prefHeight="30.0" prefWidth="246.0" promptText="customer tel" />
-        <Button layoutX="476.0" layoutY="241.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Save">
+        <TextField fx:id="txtCustomerId" layoutX="27.0" layoutY="91.0" onAction="#txtIdOnAction" prefHeight="30.0" prefWidth="246.0" promptText="Customer Id">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtCustomerName" layoutX="319.0" layoutY="91.0" prefHeight="30.0" prefWidth="246.0" promptText="Customer Name">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtCustomerNic" layoutX="27.0" layoutY="144.0" prefHeight="30.0" prefWidth="246.0" promptText="NIC">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <TextField fx:id="txtCustomerTel" layoutX="319.0" layoutY="144.0" prefHeight="30.0" prefWidth="246.0" promptText="Tel">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+        <Button layoutX="489.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Save">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button layoutX="384.0" layoutY="241.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #95a5a6;" text="Clear">
+        <Button layoutX="27.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Clear">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
+      <Button layoutX="399.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="303.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtCustomerAddress" layoutX="27.0" layoutY="195.0" prefHeight="30.0" prefWidth="246.0" promptText="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
     </children>
 </AnchorPane>

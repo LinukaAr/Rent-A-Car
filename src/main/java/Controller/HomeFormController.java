@@ -11,21 +11,17 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-
-
-
-import javax.print.attribute.standard.Media;
+//import javax.print.attribute.standard.Media;
 import java.io.IOException;
 
 public class HomeFormController {
-
 
     public AnchorPane rootNode;
     public AnchorPane node;
 
 
-    public void btnCustomerOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
+    public void btnCarOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/car_form.fxml"));
 
 
         this.node.getChildren().clear();
@@ -49,8 +45,8 @@ public class HomeFormController {
 
 
 
-    public void btnItemOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/item_form.fxml"));
+    public void  btnRentOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/rent_form.fxml"));
 
         this.node.getChildren().clear();
         this.node.getChildren().add(root);
@@ -60,8 +56,8 @@ public class HomeFormController {
 
     }
 
-    public void btnSupplierOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/supplier_form.fxml"));
+    public void btnCustomerOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
 
         this.node.getChildren().clear();
         this.node.getChildren().add(root);
@@ -80,11 +76,24 @@ public class HomeFormController {
 
             stage.setTitle("Home");
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception appropriately, such as showing an error message.
+            e.printStackTrace();
         }
     }
 
 
+    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent loginRoot = FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
+
+        Stage loginStage = new Stage();
+        loginStage.setTitle("Login Form");
+        loginStage.setScene(new Scene(loginRoot));
 
 
+        Stage currentStage = (Stage) node.getScene().getWindow();
+        currentStage.close();
+
+
+        loginStage.show();
+    }
 }
