@@ -43,14 +43,13 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <TableView fx:id="tblItem" layoutX="29.0" layoutY="228.0" prefHeight="180.0" prefWidth="580.0">
+        <TableView fx:id="tblItem" layoutX="33.0" layoutY="224.0" prefHeight="180.0" prefWidth="570.0">
             <columns>
                 <TableColumn fx:id="colCarId" prefWidth="69.60000228881836" text="Car ID" />
                 <TableColumn fx:id="colDescription" prefWidth="83.20001220703125" text="Description" />
                 <TableColumn fx:id="colRentalPrice" prefWidth="92.80000305175781" text="Rental Price" />
             <TableColumn fx:id="colQtyOnHand" prefWidth="117.60003662109375" text="Quntity On Hand" />
                 <TableColumn fx:id="colCustomerName" prefWidth="115.20001220703125" text="Customer Name" />
-            <TableColumn fx:id="colReturnDate" prefWidth="93.60003662109375" text="Return Date" />
             </columns>
         </TableView>
       <TextField fx:id="txtCustomerName" layoutX="27.0" layoutY="137.0" prefHeight="30.0" prefWidth="264.0" promptText="Customer Name">

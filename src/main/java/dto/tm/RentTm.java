@@ -2,6 +2,9 @@ package dto.tm;
 
 import lombok.*;
 
+import java.time.LocalDate;
+
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -14,5 +17,5 @@ public class RentTm {   //lombok
     private double rentalPrice;
     private int qtyOnHand;
     private String customerName;
-    private String returnDate;
+    private LocalDate returnDate;
 }

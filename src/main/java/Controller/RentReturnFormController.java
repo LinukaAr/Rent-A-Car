@@ -103,7 +103,7 @@ public class RentReturnFormController {
             double rentalPrice = resultSet.getDouble(3);
             int qtyOnHand = resultSet.getInt(4);
             String customerName = resultSet.getString(5);
-            String returnDate = resultSet.getString(6);
+            LocalDate returnDate = LocalDate.parse(resultSet.getString(6));
 
             var rent = new Rent(carId, description, rentalPrice, qtyOnHand, customerName, returnDate);
 
@@ -134,7 +134,7 @@ public class RentReturnFormController {
                 double rentalPrice = resultSet.getDouble(3);
                 int qtyOnHand = resultSet.getInt(4);
                 String customerName = resultSet.getString(5);
-                String returnDate = resultSet.getString(5);
+                LocalDate returnDate = LocalDate.parse(resultSet.getString(5));
 
                 //since JDK11
                 var rent = new Rent(carId, description, rentalPrice, qtyOnHand, customerName, returnDate);
@@ -154,7 +154,9 @@ public class RentReturnFormController {
         txtRentalPrice.setText(String.valueOf(rent.getRentalPrice()));
         txtQuantityOnHand.setText(String.valueOf(rent.getQtyOnHand()));
         txtCustomerName.setText(String.valueOf(rent.getCustomerName()));
-        txtReturnDate.setValue(LocalDate.parse(rent.getReturnDate()));
+       // txtReturnDate.setValue(LocalDate.parse(rent.getReturnDate()));
+        txtReturnDate.setValue(rent.getReturnDate());
+        colReturnDate.setCellValueFactory(new PropertyValueFactory<>("returnDate"));
     }
 
     public void btnReturnOnAction(ActionEvent actionEvent) {
